@@ -1,0 +1,41 @@
+
+/* Adjust display of the header using flexbox */
+header {
+    background: #909090;    
+}
+/* just change the header */
+/* use flexbox on the parent element */
+header .inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    height: 5em;
+    align-items: center;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 1em;
+}
+header nav ul li a {
+    color: #99cc00;
+    text-decoration: none;
+    
+}
+
+
+.inner {
+    width: 75%;
+    margin: 0 auto;
+    /* background-color: beige; */
+}
+
+.hero {
+    background: #f4f4f4;
+    min-height: 200px;
+}
+
+footer {
+    background: #5d5d5d;
+
+}
