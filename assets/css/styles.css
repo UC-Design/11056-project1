@@ -1,9 +1,18 @@
 
-/* Adjust display of the header using flexbox */
+
+
+/* the inner sets the width and centers the page */
+.inner {
+    width: 75%;
+    margin: 0 auto;
+}
+
+
+/* HEADER */
 header {
     background: #909090;    
 }
-/* just change the header */
+/* just change the inner class in the header */
 /* use flexbox on the parent element */
 header .inner {
     display: flex;
@@ -13,6 +22,7 @@ header .inner {
     align-items: center;
 }
 
+/* header navigation styling */
 header nav ul li {
     display: inline;
     margin-left: 0.2em;
@@ -29,28 +39,27 @@ header nav ul li a:hover {
     background: #fff;
 }
 
-
-
-.inner {
-    width: 75%;
-    margin: 0 auto;
-    /* background-color: beige; */
-}
-
+ /* HERO CONTENT */
+ /* we will make this a background image later */
 .hero {
     background: #f4f4f4;
     min-height: 200px;
+    /* background: url(../images/callam.jpg) no-repeat center; */
+    background-size: cover;
 }
 
-/* CSS GRID */
+/* GALLERY  */
+/* We use css grid for this content becuase it has columns and rows */
 .gallery {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    
+    /* try using different units here... */
+    /* if 4 values = 4 columns */
+    grid-template-columns: 1fr 1fr 1fr 1fr;  
     column-gap:.5em;
     row-gap: 1em;
     margin: 2em 0;
 }
+/* make the boxes look nice */
 .gallery div {
     background-color: #a88f8f;
     min-height: 10em;
@@ -59,26 +68,32 @@ header nav ul li a:hover {
     justify-content: center; 
 }
 
+/* set a background image on one of the boxes */
 .gallery .callam {
     background-image: url(../images/callam.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    /* make the image grayscale */
     filter:grayscale(0.8);
 }
+/* position the text in the box */
 .gallery h3 {
     color: #fff;
     text-align: center;
+    /* hide the text */
     display: none;
 }
 .gallery div:hover {
+    /* remove the grayscale flter */
     filter:grayscale(0);
 }
 .gallery div:hover h3 {
+    /* make the text visible again on hovers */
     display: block;
 }
 
 
 footer {
     background: #5d5d5d;
-
+    color: #fff;
 }
