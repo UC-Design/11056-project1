@@ -15,13 +15,20 @@ header .inner {
 
 header nav ul li {
     display: inline;
-    margin-left: 1em;
+    margin-left: 0.2em;
 }
 header nav ul li a {
-    color: #99cc00;
+    color: #ffffff;
     text-decoration: none;
-    
+    background: #000;
+    padding: 0.5em 0.8em;
+    text-transform: uppercase;
 }
+header nav ul li a:hover {
+    color: #000;
+    background: #fff;
+}
+
 
 
 .inner {
@@ -34,6 +41,42 @@ header nav ul li a {
     background: #f4f4f4;
     min-height: 200px;
 }
+
+/* CSS GRID */
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+    column-gap:.5em;
+    row-gap: 1em;
+    margin: 2em 0;
+}
+.gallery div {
+    background-color: #a88f8f;
+    min-height: 10em;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+.gallery .callam {
+    background-image: url(../images/callam.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter:grayscale(0.8);
+}
+.gallery h3 {
+    color: #fff;
+    text-align: center;
+    display: none;
+}
+.gallery div:hover {
+    filter:grayscale(0);
+}
+.gallery div:hover h3 {
+    display: block;
+}
+
 
 footer {
     background: #5d5d5d;
